@@ -1,0 +1,135 @@
+/* Fundo com tema de Star Wars */
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #000 50%, #111 100%);
+    color: #ffe81f; /* Cor do texto (amarelo) */
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  
+  .star-wars-theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #moving-text {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #000;
+    animation: moveText 5s infinite alternate ease-in-out;
+  }
+  
+  /* Animação do texto */
+  @keyframes moveText {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-30px);
+    }
+  }
+  body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    color: #ffe81f;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Fundo estrelado animado */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 2px, transparent 2px);
+    background-size: 50px 50px;
+    background-position: 0 0;
+    animation: stars 20s linear infinite;
+  }
+  
+  @keyframes stars {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 1000px 2000px;
+    }
+  }
+  .r2d2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    animation: bounce 2s infinite;
+  }
+  
+  .r2d2 img {
+    width: 100px;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .xwing, .tie {
+    position: absolute;
+    top: 20%;
+    animation: fly 10s linear infinite;
+  }
+  
+  .xwing {
+    left: -200px;
+  }
+  
+  .tie {
+    top: 50%;
+    left: 120%;
+  }
+  
+  .xwing img, .tie img {
+    width: 150px;
+  }
+  
+  @keyframes fly {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1500px);
+    }
+  }
+  .xwing {
+    animation: fly-diagonal 12s linear infinite;
+  }
+  
+  .tie {
+    animation: fly-straight 8s linear infinite;
+  }
+  
+  @keyframes fly-diagonal {
+    0% {
+      transform: translate(-200px, 0);
+    }
+    100% {
+      transform: translate(1500px, 500px);
+    }
+  }
+  
+  @keyframes fly-straight {
+    0% {
+      transform: translate(120%, 0);
+    }
+    100% {
+      transform: translate(-150%, 0);
+    }
+  }
+    
